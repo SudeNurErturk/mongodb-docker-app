@@ -1,4 +1,4 @@
-FROM node:18.17.0
+FROM  --platform=linux/amd64 node:14
 #WORKDIR /Users/sudenurerturk/Desktop/Servissoft/Projeler/Deneme/source
 #COPY source /Users/sudenurerturk/Desktop/Servissoft/Projeler/Deneme
 WORKDIR /src

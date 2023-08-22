@@ -4,7 +4,7 @@ services:
   node_app:
     
     image: sudeerturk/node_app:Custom_Tag-node_app
-    platform: linux/arm64/v8
+    platform: linux/amd64
     ports: 
       - "5001:5001"
     
@@ -16,7 +16,7 @@ services:
   mongodb:
     
     image: sudeerturk/mongoapp:Custom_Tag-mongoapp
-    platform: linux/arm64/v8
+    platform: linux/amd64
     ports:
       - "27017:27017"
     networks:
