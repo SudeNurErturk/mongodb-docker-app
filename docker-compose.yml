@@ -2,11 +2,14 @@ version: "3.1"
 
 services:
   node_app:
-    
-    image: sudeerturk/node_app:Custom_Tag-node_app
     platform: linux/amd64
+    build:
+      context: ./source
+    #image: amd64/node_app:14
     ports: 
       - "5001:5001"
+    
+   
     
     networks:
       - my-network
@@ -15,10 +18,14 @@ services:
 
   mongodb:
     
-    image: sudeerturk/mongoapp:Custom_Tag-mongoapp
     platform: linux/amd64
+    
+    build:
+      context: ./mongodb
+    image: amd64/mongo:4.4
     ports:
       - "27017:27017"
+  
     networks:
       - my-network
     
