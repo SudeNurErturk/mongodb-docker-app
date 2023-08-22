@@ -1,0 +1,30 @@
+version: "3.1"
+
+services:
+  node_app:
+    
+    image: sudeerturk/node_app:Custom_Tag-node_app
+    platform: linux/arm64/v8
+    ports: 
+      - "5001:5001"
+    
+    networks:
+      - my-network
+    
+
+
+  mongodb:
+    
+    image: sudeerturk/mongoapp:Custom_Tag-mongoapp
+    platform: linux/arm64/v8
+    ports:
+      - "27017:27017"
+    networks:
+      - my-network
+    
+
+
+networks:
+  my-network:
+    driver: bridge
+
